@@ -1,0 +1,47 @@
+.blog-navbar {
+    margin: 24px 0;
+}
+
+.blog-brand {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.blog-nav-link {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.blog-nav-link li {
+    float: left;
+    padding: 0 16px;
+}
+
+.blog-nav-link li a{
+    position: relative;
+    color: #212121;
+    font-size: 1.15em;
+    
+}
+
+.blog-nav-link li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #212121;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.blog-nav-link li a:hover::after {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}

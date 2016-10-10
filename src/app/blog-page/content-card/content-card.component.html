@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-image">
+    <img src="{{content.imageCover}}" alt="" [routerLink]="['/blog', content.$key]">
+  </div>
+  <div class="card-content">
+    <span class="card-title">
+      <strong><a [routerLink]="['/blog', content.$key]">{{content.title}}</a></strong>
+    </span>
+    <p>{{content.description}}</p>
+  </div>
+  <div class="card-action">
+  </div>
+</div>

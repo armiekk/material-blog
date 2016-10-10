@@ -1,0 +1,14 @@
+<div 
+  *ngIf="contentList.length > 0"
+  class="search-result"
+  infinite-scroll
+  [infiniteScrollDistance]="1"
+  (scrolled)="onScrollDown()"
+>
+  <div *ngFor="let content of contentList">
+    <app-content-card [content]="content"></app-content-card>
+  </div>
+</div>
+<div *ngIf="contentList.length == 0">
+  <img src="../../../assets/vendor/loading-svg/loading-bubbles.svg" class="loading-indicator" alt="loading...">
+</div>

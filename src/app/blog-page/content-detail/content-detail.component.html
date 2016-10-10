@@ -1,0 +1,17 @@
+<div *ngIf="content.title != null">
+  <div class="z-depth-2">
+    <div class="content-detail-blog">
+      <div class="center-align">
+        <img src="{{content.imageCover}}" class="responsive-img content-img-blog">
+      </div>
+      <div class="section">
+        <h3>{{content.title}}</h3>
+      </div>
+      <div class="divider"></div>
+      <p>{{content.detail}}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="content.title == null">
+  <img src="../../../assets/vendor/loading-svg/loading-bubbles.svg" class="loading-indicator" alt="loading...">
+</div>
